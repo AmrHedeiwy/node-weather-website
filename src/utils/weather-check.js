@@ -7,7 +7,7 @@ const geocode = (address, callback) => {
         if(error) {
             callback('unable to load, check your connectivity')
         }
-        else if( response.body.data.length === 0 || response.body.data === undefined ) {
+        else if(response.body.data === undefined || response.body.data.length === 0) {
             callback('unable to find weather address, search again')
         } else {
             const {latitude, longitude, continent} = response.body.data[0]
