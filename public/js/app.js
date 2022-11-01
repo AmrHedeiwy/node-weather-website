@@ -1,4 +1,4 @@
-console.log('this is javascript')
+
 
 // fetch('http://localhost:3000/weather?address=').then((response) => {
 //     response.json().then((data) => {
