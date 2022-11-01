@@ -28,8 +28,8 @@ const weathercode = (latitude, longitude, callback) => {
         else if(response.body.error){
             callback('invalid input, try again')
         } else {
-            const {weather_descriptions, temperature, feelslike} = response.body.current
-            const sentence = 'it is ' + weather_descriptions + '. it is ' + temperature + ' fahrenheit, it feels like ' + feelslike + ' fahrenheit'
+            const {weather_descriptions, temperature, feelslike, wind_speed} = response.body.current
+            const sentence = 'it is ' + weather_descriptions + '. it is ' + temperature + ' fahrenheit, it feels like ' + feelslike + ' fahrenheit. the wind speed is ' + wind_speed
             callback(undefined, sentence)
         }
 
